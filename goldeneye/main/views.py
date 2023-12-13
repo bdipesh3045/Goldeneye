@@ -13,3 +13,15 @@ def about(request):
 
 def teacher(request):
     return render(request, "teachers.html")
+
+
+def blog(request):
+    return render(request, "blog.html")
+
+
+def pricing(request):
+    return render(request, "pricing.html")
+
+
+def contact(request):
+    return render(request, "contact.html")
