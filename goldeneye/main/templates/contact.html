@@ -1,6 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+{% if is_successful %}
+    <script> alert("Form submitted successfully!");</script>
+{% endif %}
+
+
 <div class="all-title-box">
 	<div class="container text-center">
 		<h1>Contact<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
@@ -18,8 +24,9 @@
 			<div class="col-xl-6 col-md-12 col-sm-12">
 				<div class="contact_form">
 					<div id="message"></div>
-					<form id="contactform" class="" action="contact.php" name="contactform" method="post">
+					<form id="contactform" class="" action="{% url 'contact' %}" name="contactform" method="post">
 						<div class="row row-fluid">
+							{% csrf_token %}
 							<div class="col-lg-6 col-md-6 col-sm-6">
 								<input type="text" name="first_name" id="first_name" class="form-control" placeholder="First Name">
 							</div>
@@ -44,7 +51,7 @@
 			</div><!-- end col -->
 			<div class="col-xl-6 col-md-12 col-sm-12">
 				<div class="map-box">
-					<div id="custom-places" class="small-map"></div>
+					<div id="custom-places" class="small-map"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14063.40407734298!2d83.9809621!3d28.2118386!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399595ac8d5df7a3%3A0x1971ef66310b97ae!2sGolden%20Eye%20Academy!5e0!3m2!1sne!2snp!4v1702831378985!5m2!1sne!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
 				</div>
 			</div>
 		</div><!-- end row -->

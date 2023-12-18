@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from .forms import ContactForm
+
 
 # Create your views here.
 
@@ -24,4 +26,11 @@ def pricing(request):
 
 
 def contact(request):
-    return render(request, "contact.html")
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # Add any additional logic or redirection here
+            return render(request, "contact.html", {"is_successful": True})
+
+    return render(request, "contact.html", {"is_successful": False})
