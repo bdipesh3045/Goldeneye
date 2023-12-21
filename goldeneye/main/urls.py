@@ -1,13 +1,14 @@
 from django.urls import path
-from . import views
+from main import views
 
 urlpatterns = [
     path("index/", views.home, name="home_page"),
     path("", views.home, name="home_page"),
-    path("blog/", views.blog, name="blog"),
     path("about/", views.about, name="about"),
     path("teacher/", views.teacher, name="teacher"),
     path("price/", views.pricing, name="price"),
     path("contact/", views.contact, name="contact"),
-    # Add more paths as needed
+    path("course2/", views.course2, name="course2"),
+    path("course3/", views.course3, name="course3"),
+    path("course4/", views.course4, name="course4"),
 ]

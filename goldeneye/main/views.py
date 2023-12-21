@@ -17,12 +17,20 @@ def teacher(request):
     return render(request, "teachers.html")
 
 
-def blog(request):
-    return render(request, "blog.html")
-
-
 def pricing(request):
     return render(request, "pricing.html")
+
+
+def course2(request):
+    return render(request, "course-grid-2.html")
+
+
+def course3(request):
+    return render(request, "course-grid-3.html")
+
+
+def course4(request):
+    return render(request, "course-grid-4.html")
 
 
 def contact(request):
