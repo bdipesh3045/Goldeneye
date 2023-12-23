@@ -25,6 +25,8 @@ SECRET_KEY = "django-insecure-(56d&-eh6^*18%fnfe2n5a_lqfhd1ivyy*8_@tbw*n7^9__@&_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# ALLOWED_HOSTS = ["*"]
+
 ALLOWED_HOSTS = []
 
 
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "main",
     "blog",
+    "student",
 ]
 
 MIDDLEWARE = [
@@ -49,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "goldeneye.urls"
@@ -126,6 +130,9 @@ STATIC_URL = "static/"
 # Testing was going on
 STATICFILES_DIRS = [BASE_DIR / "main/static"]
 
+AUTH_USER_MODEL = "student.Student"
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+# settings.py
