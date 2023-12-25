@@ -87,8 +87,13 @@
 
 
 {% else %}
-  <a href="{% url 'login' %}"> Click Here to Login</a>
-  <p>If you donot have account:<a href="{% url 'signup' %}"> Signup</a></p>
+<div style="font-family: 'Arial', sans-serif; text-align: center; margin-top: 50px;">
+
+    <a href="{% url 'login' %}" style="text-decoration: none; color: #007bff; font-size: 20px; display: block; margin-bottom: 10px;">Click Here to Login</a>
+
+    <p style="font-size: 16px; color: #6c757d;">If you don't have an account: <a href="{% url 'signup' %}" style="text-decoration: none; color: #28a745; font-weight: bold;">Signup</a></p>
+
+</div>
 {% endif %}
 </div><!-- end col -->
 <!-- Sidebar -->
