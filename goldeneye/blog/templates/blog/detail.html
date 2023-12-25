@@ -14,7 +14,7 @@
             <div class="col-lg-9 blog-post-single">
                 <div class="blog-item">
                     <div class="image-blog">
-                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid" style="height: 250px; width: 530px;">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid" style="height: 250px; width: 783px;">
                     </div>
                     <div class="post-content">
                         <div class="post-date">
@@ -47,7 +47,7 @@
                                         <h5 class="comment-author">{{ comment.author }}</h5>
                                         <div class="comment-meta">
                                             <a href="#" class="comment-date link-style1">{{ comment.created_on|date:"F d, Y" }}</a>
-                                            <a class="comment-reply-link link-style3" href="#respond">Reply »</a>
+                                            <!-- <a class="comment-reply-link link-style3" href="#respond">Reply »</a> -->
                                         </div>
                                         <div class="comment-body">
                                             <p>{{ comment.body | linebreaks }}</p>
@@ -60,30 +60,17 @@
                 </div>
 
                 <!-- Comment Form -->
+                {% if request.user.is_authenticated %}
                 <div class="comments-form">
                     <h4>Leave a comment</h4>
                     <div class="comment-form-main">
                         <form method="post">
                             {% csrf_token %}
                             <div class="row">
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input class="form-control" name="commenter-name" placeholder="Name" id="commenter-name" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input class="form-control" name="commenter-email" placeholder="Email" id="commenter-email" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <input class="form-control" name="commenter-url" placeholder="Website URL" id="commenter-url" type="text">
-                                    </div>
-                                </div>
+        
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <textarea class="form-control" name="commenter-message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
+                                        <textarea class="form-control" name="message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-12 post-btn">
@@ -93,12 +80,23 @@
                         </form>
                     </div>
                 </div>
-            </div><!-- end col -->
+            
 
-            <!-- Sidebar -->
-            <div class="col-lg-3 col-12 right-single">
-                <!-- Add your sidebar content here -->
-            </div>
-        </div><!-- end row -->
-    </div><!-- end container -->
+            
+
+
+
+{% else %}
+  <a href="{% url 'login' %}"> Click Here to Login</a>
+  <p>If you donot have account:<a href="{% url 'signup' %}"> Signup</a></p>
+{% endif %}
+</div><!-- end col -->
+<!-- Sidebar -->
+<div class="col-lg-3 col-12 right-single">
+    <!-- Add your sidebar content here -->
+</div>
+</div><!-- end row -->
+</div><!-- end container -->
+
+
 {% endblock page_content %}
