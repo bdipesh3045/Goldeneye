@@ -20,7 +20,7 @@
                     </div>
                     <div class="meta-info-blog">
                         <span><i class="fa fa-calendar"></i> <a href="#">{{ post.created_on.date }}</a></span>
-                        <span><i class="fa fa-tag"></i>  <a href="#">News</a></span>
+                        <span><i class="fa fa-tag"></i>  {% for category in post.categories.all %}<a href="{% url 'blog_category' category.name %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</span>
                         <span><i class="fa fa-comments"></i> <a href="#">12 Comments</a></span>
                     </div>
                     <div class="blog-title">

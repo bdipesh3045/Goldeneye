@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .forms import ContactForm
+from django.views.decorators.csrf import csrf_exempt
 
 
 # Create your views here.
@@ -33,6 +34,7 @@ def course4(request):
     return render(request, "course-grid-4.html")
 
 
+@csrf_exempt
 def contact(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
