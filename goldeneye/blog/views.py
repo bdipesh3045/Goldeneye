@@ -7,7 +7,7 @@ from blog.models import Comment, Post
 
 def blog_index(request):
     posts = Post.objects.all().order_by("-created_on")
-    context = {"posts": posts}
+    context = {"posts": posts, "News": "False"}
     return render(request, "blog/index_blog.html", context)
 
 
@@ -15,7 +15,7 @@ def blog_category(request, category):
     posts = Post.objects.filter(categories__name__contains=category).order_by(
         "-created_on"
     )
-    context = {"category": category, "posts": posts}
+    context = {"category": category, "posts": posts, "News": "True"}
     return render(request, "blog/category.html", context)
 
 
