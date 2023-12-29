@@ -467,11 +467,12 @@ a img.aligncenter {
 
 
 .top-navbar .bg-light{
-	background: #4c5a7d !important;
+	background: rgb(255,255,252);
+   
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
-	color: #ffffff;
+	color: #131212;
 	font-size: 16px;
 	font-weight: 500;
 }
@@ -501,7 +502,7 @@ a img.aligncenter {
 	height: 5px;
     opacity: 0;
     margin-left: -3px;
-    background-color: #ffffff;
+    background-color: #0f0f0f;
 	border-radius: 50px;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
@@ -523,7 +524,7 @@ a img.aligncenter {
 	border-radius: 50px;
     opacity: 0;
     margin-left: -10px;
-    background-color: #ffffff;
+    background-color: #0f0f0f;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     transition: all 900ms ease;
@@ -546,7 +547,7 @@ a img.aligncenter {
 	border: none !important;
     opacity: 0;
     margin-right: -11px;
-    background-color: #ffffff;
+    background-color: #0a0909;
     transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
     -ms-transition: all 900ms ease;
@@ -612,11 +613,11 @@ a img.aligncenter {
 .top-navbar .bg-light {
     padding-top: 0px;
     padding-bottom: 0px;
-    box-shadow: 0 0 18px 0 rgba(0,0,0,.12);
+    box-shadow: 0 0 18px 0 rgba(239, 208, 32, 0.436);
 }
 
 .top-navbar .navbar-light .navbar-nav li .dropdown-menu {
-    box-shadow: 0 2px 12px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 12px 0 rgba(211, 211, 28, 0.12);
     border: none;
     border-radius: 0px;
     margin: 0px;
@@ -651,6 +652,7 @@ a img.aligncenter {
 
 .navbar-right li a.hover-btn-new:hover span {
   color: #ffffff;
+  font-weight: 500;
 }
 .navbar-right li a.hover-btn-new::before {
   height: 100%;
@@ -679,9 +681,10 @@ a img.aligncenter {
 
 
 .navbar-toggler{
-	background: #ffffff;
-	border-radius: 0px;
+	background: #fbfbf9;
+	border-radius: 2px;
 	padding: 10px 10px;
+    
 }
 
 .navbar-toggler .icon-bar {
@@ -689,10 +692,11 @@ a img.aligncenter {
     width: 22px;
     height: 2px;
     border-radius: 1px;
-	background: #333333;
+	background: rgb(19, 18, 18);
 }
 .navbar-toggler .icon-bar + .icon-bar {
     margin-top: 4px;
+    
 }
 
 .navbar-toggler:hover{
@@ -700,7 +704,7 @@ a img.aligncenter {
 }
 
 .navbar-toggler:hover .icon-bar{
-	background: #ffffff;
+	background: #f8f6f6;
 }
 
 
