@@ -22,6 +22,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    class Meta:
+        ordering = ["-created_on"]
+
 
 class Comment(models.Model):
     author = models.CharField(max_length=60)
@@ -31,3 +34,6 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.author} on '{self.post}'"
+
+    class Meta:
+        ordering = ["-created_on"]
