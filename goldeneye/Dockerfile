@@ -17,7 +17,7 @@ RUN python manage.py makemigrations
 RUN python manage.py migrate
 
 # Run the production server
-ENTRYPOINT ["python", "mysite/manage.py"]
+ENTRYPOINT ["python", "manage.py"]
 CMD ["runserver", "0.0.0.0:8000"]
 
 
