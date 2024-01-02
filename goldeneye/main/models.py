@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 
 # Create your models here.
@@ -21,6 +22,10 @@ class contact(models.Model):
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=14, unique=True)
     comments = models.CharField(max_length=700)
+    date = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return f"{self.id}: {self.first_name} {self.last_name} - {self.phone}"
+
+    class Meta:
+        ordering = ["-date"]
