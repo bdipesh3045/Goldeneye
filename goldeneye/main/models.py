@@ -29,3 +29,15 @@ class contact(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+
+class Notification(models.Model):
+    message = models.CharField(max_length=255)
+    image = models.ImageField(upload_to="notification_images/", null=True, blank=True)
+    date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.message}'"
+
+    class Meta:
+        ordering = ["-date"]
