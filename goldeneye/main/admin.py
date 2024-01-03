@@ -1,7 +1,10 @@
 from django.contrib import admin
-from .models import contact
+from .models import contact, Notification
+
 
 # admin.site.register(contact)
+class NotificationAdmin(admin.ModelAdmin):
+    list_display = ["message", "date"]
 
 
 class contactAdmin(admin.ModelAdmin):
@@ -25,5 +28,5 @@ class contactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(contact, contactAdmin)
-
+admin.site.register(Notification, NotificationAdmin)
 # Register your models here.
