@@ -11,4 +11,9 @@ urlpatterns = [
     path("course2/", views.course2, name="course2"),
     path("course3/", views.course3, name="course3"),
     path("course4/", views.course4, name="course4"),
+    path(
+        "notification/",
+        views.get_notification_data,
+        name="get_notification_data",
+    ),
 ]
