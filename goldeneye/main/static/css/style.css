@@ -3993,21 +3993,35 @@ a.link-style3 {
 
 .course-item{
 	background: #ffffff;
+    
+
 }
-.course-item{}
-.course-title > h2 {
-    margin: 15px 0;
-    padding: 0px;
+.course-item{
+    margin-top: 50px;
 }
+
+
+.course-title > h2{
+
+    border: 1px solid #f7db60;
+    text-align: center;
+    background-color: #262626;
+    border-radius: 20px;
+  
+    
+}
+
 .course-title a {
     font-size: 18px;
     line-height: 25px;
     font-weight: 500;
-    color: #333333;
+    color: wheat;
     text-transform: capitalize;
 }
-.course-item:hover .course-title a {
+.course-item:hover .course-title a{
 	color: #eea412;
+   
+    
 }
 .course-br{
 	border: 1px solid #4babb1;
