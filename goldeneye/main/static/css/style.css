@@ -612,7 +612,7 @@ a img.aligncenter {
 .top-navbar .bg-light {
     padding-top: 0px;
     padding-bottom: 0px;
-    box-shadow: 0 0 18px 0 rgba(0,0,0,.12);
+    box-shadow: 0 0 18px 0 rgba(255, 255, 78, 0.434);
 }
 
 .top-navbar .navbar-light .navbar-nav li .dropdown-menu {
@@ -801,6 +801,105 @@ a img.aligncenter {
 	height: 100%;
 	width: 100%;
 }
+
+
+/*------------------------------------------------------------
+SERVICES FOR HOME
+----------------------------------------------------------*/
+
+.service-container{
+    background-color: rgb(220, 152, 15);
+    font-family: 'Poppins', sans-serif;
+}
+.service-section-header{
+    text-align: center;
+    margin-top: 30px;
+    margin-top: 15px;
+}
+
+.single-service{
+    border: 1px solid #f7db60;
+    text-align: center;
+    background-color: rgb(243, 180, 64);
+    
+}
+
+.service-bg{
+    height: 200px;
+    position: relative;
+    
+}
+.service-bg-1{
+    background: url("../images/preparation.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    
+}
+.service-bg-2{
+    background: url("../images/language.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.service-bg-3{
+    background: url("../images/computer.jfif");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.service-bg-4{
+    background: url("../images/blog_5.jpg");
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.service-bg h2{
+    color:white;
+    background: #080808;
+    border: 1px solid rgb(227, 176, 23);
+    font-size: 17px;
+    text-align: center;
+    font-weight: 700;
+    padding: 15px;
+    position: absolute;
+    left: 8%;
+    width: 84%;
+    margin:0;
+    bottom: -25px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+}
+
+.single-service:hover .service-bg h2{
+    background: rgb(245, 244, 243);
+    transition: .9s;
+    color:rgb(227, 176, 23);
+    
+
+}
+
+.service-text{
+    padding: 50px 30px 20px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.service-text p:last-child{
+    margin: 0;
+    line-height: 1.8;
+}
+.btn-area{
+    display:inline-block;
+    color:#fcf4d4;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 30px;
+    text-transform: capitalize;
+}
+
+
+
 
 
 
@@ -2085,7 +2184,7 @@ hr.invis1 {
 
 .has-error .bootstrap-select .dropdown-toggle,
 .error .bootstrap-select .dropdown-toggle {
-    border-color: #b94a48;
+    border-color: #fac61b;
 }
 
 .bootstrap-select.fit-width {
@@ -2097,7 +2196,7 @@ hr.invis1 {
 }
 
 .bootstrap-select .dropdown-toggle:focus {
-    outline: thin dotted #333333 !important;
+    outline: thin dotted #fac61b !important;
     outline: 5px auto -webkit-focus-ring-color !important;
     outline-offset: -2px;
 }
@@ -2400,11 +2499,13 @@ select.mobile-device {
     width: 100%;
     color: #bcbcbc !important;
 }
-
+.bootstrap-select > .btn:hover{
+    background: rgb(255, 174, 0) !important;
+}
 .contact_form {
     border: none;
-    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
-    background-color: #333333;
+    box-shadow: 0 5px 14px rgba(250, 195, 15, 0.655);
+    background-color: rgb(70, 67, 47);
     padding: 40px 30px;
 	margin-right: -15px;
 }
@@ -2414,7 +2515,7 @@ select.mobile-device {
     margin-bottom: 30px;
     border: 1px solid #ebebeb;
     box-sizing: border-box;
-    color: #bcbcbc;
+    color: #5f5f5f;
     font-size: 16px;
     outline: 0 none;
     padding: 10px 25px;
