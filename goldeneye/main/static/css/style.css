@@ -3763,7 +3763,7 @@ blockquote.default {
     float: none;
 }
 .blog-comments{
-	margin: 50px auto;
+	margin: 0px auto;
 }
 .blog-comments h4{
 	font-size: 22px;
