@@ -467,7 +467,7 @@ a img.aligncenter {
 
 
 .top-navbar .bg-light{
-	background: #fefefe !important;
+	background: #eea412 !important;
 }
 
 .top-navbar .navbar-light .navbar-nav .nav-link{
@@ -901,7 +901,69 @@ SERVICES FOR HOME
 
 
 
+/*----------------------------------------------------------
+TEAM
+-----------------------------------------------------
+*/
 
+
+.custom-padding{
+    padding: 45px 0;
+    background-color: #262626;
+}
+img{
+    width:80%;
+    height: auto;
+    margin-left: 55px;
+}
+
+.social a{
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    margin: 5px;
+    color: wheat;
+    display: inline-block;
+    border: 1px solid white;
+    height: 30px;
+    width: 30px;
+}
+
+.social{
+    top: -27px;
+    position: relative;
+    z-index: 2;
+    border-radius: 25px;
+    background: #eea412;
+    text-align: center;
+    padding: 5px;
+    margin: 0px 25px;
+}
+
+.team-area h2{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    color:wheat;
+}
+
+.team-area h2 span{
+    color: #eea412;
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+    margin-top:5px;
+}
+
+.team-box h2{
+    color:wheat;
+    padding: 5px;
+}
+
+.team-box p{
+    color: white;
+    padding: 5px;
+}
 
 /*------------------------------------------------------------------
     SECTIONS
@@ -963,7 +1025,7 @@ SERVICES FOR HOME
 }
 
 .section.wb {
-    background-color: #ffffff;
+    background-color: #262626;
 }
 
 .section.lb {
@@ -3480,13 +3542,13 @@ span.m_1 {
     color: #999;
 }
 .our-team:hover .team-content{
-	background: #4babb1;
+	background: #080808;
 }
 .our-team:hover .team-content .title{
-	color: #ffffff;
+	color: wheat;
 }
 .our-team:hover .post{
-	color: #cccccc;
+	color: #f3904d;
 }
 
 
@@ -3931,21 +3993,35 @@ a.link-style3 {
 
 .course-item{
 	background: #ffffff;
+    
+
 }
-.course-item{}
-.course-title > h2 {
-    margin: 15px 0;
-    padding: 0px;
+.course-item{
+    margin-top: 50px;
 }
+
+
+.course-title > h2{
+
+    border: 1px solid #f7db60;
+    text-align: center;
+    background-color: #262626;
+    border-radius: 20px;
+  
+    
+}
+
 .course-title a {
     font-size: 18px;
     line-height: 25px;
     font-weight: 500;
-    color: #333333;
+    color: wheat;
     text-transform: capitalize;
 }
-.course-item:hover .course-title a {
+.course-item:hover .course-title a{
 	color: #eea412;
+   
+    
 }
 .course-br{
 	border: 1px solid #4babb1;

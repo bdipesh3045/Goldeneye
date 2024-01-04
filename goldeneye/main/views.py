@@ -34,8 +34,8 @@ def about(request):
     return render(request, "about.html")
 
 
-def teacher(request):
-    return render(request, "teachers.html")
+def team(request):
+    return render(request, "team.html")
 
 
 def pricing(request):
