@@ -19,7 +19,7 @@ class contact(models.Model):
     id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    email = models.EmailField(unique=True)
+    email = models.EmailField()
     phone = models.CharField(max_length=14, unique=True)
     comments = models.CharField(max_length=700)
     date = models.DateTimeField(default=timezone.now)
