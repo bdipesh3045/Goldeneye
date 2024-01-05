@@ -909,7 +909,7 @@ TEAM
 
 .custom-padding{
     padding: 45px 0;
-    background-color: #262626;
+ 
 }
 img{
     width:80%;
@@ -1025,7 +1025,7 @@ img{
 }
 
 .section.wb {
-    background-color: #262626;
+    background-color: #fcf8f8;
 }
 
 .section.lb {
@@ -3582,7 +3582,7 @@ span.m_1 {
 }
 .blog-item .meta-info-blog{
 	margin-top: 25px;
-	padding: 0;
+	padding: 5px;
 	text-transform: uppercase;
 	font-size: 12px;
 	font-weight: 300;
@@ -4015,17 +4015,22 @@ a.link-style3 {
     font-size: 18px;
     line-height: 25px;
     font-weight: 500;
-    color: wheat;
+    color: rgb(252, 251, 250);
     text-transform: capitalize;
+}
+.course-title > h2:hover{
+    background-color: rgb(251, 250, 250);
 }
 .course-item:hover .course-title a{
 	color: #eea412;
-   
+    
     
 }
 .course-br{
-	border: 1px solid #4babb1;
+	border: 1px solid #eea412;
 	padding: 15px;
+    border-radius: 0px 0px 20px 20px;
+
 }
 .course-meta-bot{
 	border: 1px solid #4babb1;
