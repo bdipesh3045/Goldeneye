@@ -46,14 +46,6 @@ def course2(request):
     return render(request, "course-grid-2.html")
 
 
-def course3(request):
-    return render(request, "course-grid-3.html")
-
-
-def course4(request):
-    return render(request, "course-grid-4.html")
-
-
 @csrf_exempt
 def contact(request):
     if request.method == "POST":
@@ -61,6 +53,6 @@ def contact(request):
         if form.is_valid():
             form.save()
             # Add any additional logic or redirection here
-            return render(request, "contact.html", {"is_successful": True})
+            return render(request, "thank.html", {"is_successful": True})
 
     return render(request, "contact.html", {"is_successful": False})

@@ -8,9 +8,7 @@ urlpatterns = [
     path("team/", views.team, name="team"),
     path("price/", views.pricing, name="price"),
     path("contact/", views.contact, name="contact"),
-    path("course2/", views.course2, name="course2"),
-    path("course3/", views.course3, name="course3"),
-    path("course4/", views.course4, name="course4"),
+    path("services/", views.course2, name="course2"),
     path(
         "notification/",
         views.get_notification_data,
