@@ -501,7 +501,7 @@ a img.aligncenter {
 	height: 5px;
     opacity: 0;
     margin-left: -3px;
-    background-color: #eea412;
+    background-color: #fcfcfb;
 	border-radius: 50px;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
@@ -523,7 +523,7 @@ a img.aligncenter {
 	border-radius: 50px;
     opacity: 0;
     margin-left: -10px;
-    background-color: #eea412;
+    background-color: #fdfdfb;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
     transition: all 900ms ease;
@@ -546,7 +546,7 @@ a img.aligncenter {
 	border: none !important;
     opacity: 0;
     margin-right: -11px;
-    background-color: #eea412;
+    background-color: #fcfcfa;
     transition: all 900ms ease;
     -webkit-transition: all 900ms ease;
     -ms-transition: all 900ms ease;
@@ -563,7 +563,7 @@ a img.aligncenter {
 	left: 40%;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link{
-	color: #eea412;
+	color: #f5f5f4;
 }
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link::after{
 	opacity: 1;
