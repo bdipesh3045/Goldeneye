@@ -7,7 +7,13 @@ from django.core.cache import cache
 
 
 def faq_view(request):
-    faqs = FAQ.objects.all()
+    faqs = cache.get("cached_faqs")
+
+    if faqs is None:
+        faqs = FAQ.objects.all()
+
+        cache.set("cached_faqs", faqs, 900)
+
     return render(request, "faq.html", {"faqs": faqs})
 
 
