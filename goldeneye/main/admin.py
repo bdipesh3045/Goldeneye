@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import contact, Notification
+from .models import contact, Notification, FAQ
 
 
 # admin.site.register(contact)
@@ -25,6 +25,13 @@ class contactAdmin(admin.ModelAdmin):
         ),
     )
     list_per_page = 10
+
+
+class FAQADMIN(admin.ModelAdmin):
+    list_display = ["question", "date"]
+
+
+admin.site.register(FAQ, FAQADMIN)
 
 
 admin.site.register(contact, contactAdmin)

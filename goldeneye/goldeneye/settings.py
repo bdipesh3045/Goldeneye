@@ -43,10 +43,37 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "cloudinary_storage",
+    "cloudinary",
     "main",
     "blog",
     "student",
+    "dbbackup",
+    "django_apscheduler",
 ]
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "goldeneye",
+        "USER": os.environ.get("USER"),
+        "PASSWORD": os.environ.get("PASSWORD"),
+        "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
+        "PORT": "5432",
+        "OPTIONS": {"sslmode": "require"},
+    }
+}
+DBBACKUP_STORAGE = "django.core.files.storage.FileSystemStorage"
+DBBACKUP_STORAGE_OPTIONS = {"location": BASE_DIR / "/backup/"}
+DBBACKUP_CONNECTOR_MAPPING = {
+    "django.db.backends.postgresql_psycopg2": "dbbackup.db.postgresql.PgDumpConnector",
+}
+
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": os.environ.get("CloudNAME"),
+    "API_KEY": os.environ.get("ApiKey"),
+    "API_SECRET": os.environ.get("ApiSecret"),
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -85,25 +112,12 @@ WSGI_APPLICATION = "goldeneye.wsgi.application"
 
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "goldeneye",
-        "USER": "bdipesh304",
-        "PASSWORD": "se0POHVT9ioG",
-        "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
-        "PORT": "5432",
-        "OPTIONS": {"sslmode": "require"},
-    }
-}
-
-
 # DATABASES = {
 #     "default": {
 #         "ENGINE": "django.db.backends.postgresql",
 #         "NAME": "goldeneye",
-#         "USER": os.environ.get("USER"),
-#         "PASSWORD": os.environ.get("PASSWORD"),
+#         "USER": "bdipesh304",
+#         "PASSWORD": "se0POHVT9ioG",
 #         "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
 #         "PORT": "5432",
 #         "OPTIONS": {"sslmode": "require"},
@@ -160,3 +174,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 # settings.py
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
+
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+        "LOCATION": "unique-snowflake",
+    }
+}

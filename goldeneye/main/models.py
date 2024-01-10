@@ -41,3 +41,15 @@ class Notification(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+
+class FAQ(models.Model):
+    question = models.TextField()
+    answer = models.TextField()
+    date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"{self.question}'"
+
+    class Meta:
+        ordering = ["-date"]
