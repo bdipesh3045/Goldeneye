@@ -48,8 +48,6 @@ INSTALLED_APPS = [
     "main",
     "blog",
     "student",
-    "dbbackup",
-    "django_apscheduler",
 ]
 
 DATABASES = {
