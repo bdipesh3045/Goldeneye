@@ -17,29 +17,33 @@ def faq_view(request):
     return render(request, "faq.html", {"faqs": faqs})
 
 
+def google(request):
+    return render(request, "google509ac1021dca925d.html")
+
+
 def home(request):
-    # most_recent_notification = Notification.objects.latest("date")
-    # if most_recent_notification:
-    #     context = {"most_recent_notification": most_recent_notification}
-    #     return render(request, "index.html", context)
+    # uncomment this code if the site is  under mainatainence
+    # return render(request, "maintainence.html")
     return render(request, "index.html")
 
 
 def get_notification_data(request):
-    cached_data = cache.get("most_recent_notification_data")
-    if cached_data:
-        return JsonResponse(cached_data)
-    most_recent_notification = Notification.objects.latest("date")
-    if most_recent_notification:
-        data = {
-            "message": most_recent_notification.message,
-            "image_url": most_recent_notification.image.url
-            if most_recent_notification.image
-            else None,
-        }
-        cache.set("most_recent_notification_data", data, timeout=60 * 5)
-        return JsonResponse(data)
-    return JsonResponse({"error": "No notifications available"})
+    try:
+        cached_data = cache.get("most_recent_notification_data")
+        if cached_data:
+            return JsonResponse(cached_data)
+        most_recent_notification = Notification.objects.latest("date")
+        if most_recent_notification:
+            data = {
+                "message": most_recent_notification.message,
+                "image_url": most_recent_notification.image.url
+                if most_recent_notification.image
+                else None,
+            }
+            cache.set("most_recent_notification_data", data, timeout=60 * 5)
+            return JsonResponse(data)
+    except Notification.DoesNotExist:
+        return JsonResponse({"error": "No notifications available"})
 
 
 def about(request):

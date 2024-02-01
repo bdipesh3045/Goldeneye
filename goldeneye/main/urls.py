@@ -10,6 +10,8 @@ urlpatterns = [
     path("contact/", views.contact, name="contact"),
     path("services/", views.course2, name="course2"),
     path("faq/", views.faq_view, name="faq"),
+     path("google509ac1021dca925d.html/", views.google, name="google"),
+    
     path(
         "notification/",
         views.get_notification_data,
