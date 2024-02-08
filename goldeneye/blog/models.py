@@ -1,4 +1,6 @@
 from django.db import models
+from ckeditor.fields import RichTextField
+import uuid
 
 
 class Category(models.Model):
@@ -12,12 +14,18 @@ class Category(models.Model):
 
 
 class Post(models.Model):
+    post_id = models.UUIDField(default=uuid.uuid4, unique=True, null=True)
     title = models.CharField(max_length=255)
-    body = models.TextField()
+    body = RichTextField(blank=True, null=True)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField("Category", related_name="posts")
     image = models.ImageField(upload_to="blog/", default="")
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["model_id"]),
+        ]
 
     def __str__(self):
         return self.title
