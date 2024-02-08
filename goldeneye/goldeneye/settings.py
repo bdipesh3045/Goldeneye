@@ -31,12 +31,18 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ["*"]
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+]
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
 
 # Application definition
 
 INSTALLED_APPS = [
+    "debug_toolbar",
+    "jazzmin",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -48,6 +54,7 @@ INSTALLED_APPS = [
     "main",
     "blog",
     "student",
+    "ckeditor",
 ]
 
 DATABASES = {
@@ -81,6 +88,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
     # "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
@@ -159,7 +167,7 @@ USE_TZ = True
 import os
 
 STATIC_URL = "static/"
-# STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
