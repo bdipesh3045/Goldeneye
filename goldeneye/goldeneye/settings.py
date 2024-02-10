@@ -59,19 +59,9 @@ INSTALLED_APPS = [
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "goldeneye",
-        "USER": os.environ.get("USER"),
-        "PASSWORD": os.environ.get("PASSWORD"),
-        "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
-        "PORT": "5432",
-        "OPTIONS": {"sslmode": "require"},
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-}
-DBBACKUP_STORAGE = "django.core.files.storage.FileSystemStorage"
-DBBACKUP_STORAGE_OPTIONS = {"location": BASE_DIR / "/backup/"}
-DBBACKUP_CONNECTOR_MAPPING = {
-    "django.db.backends.postgresql_psycopg2": "dbbackup.db.postgresql.PgDumpConnector",
 }
 
 CLOUDINARY_STORAGE = {

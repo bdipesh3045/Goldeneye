@@ -45,3 +45,20 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ["-created_on"]
+
+
+class Reply(models.Model):
+
+    comment = models.ForeignKey(Comment, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    reply = models.TextField()
+
+    def __str__(self):
+        return self.reply
+
+    class Meta:
+        indexes = [
+            models.Index(fields=["name"]),
+        ]
+        verbose_name = "Reply"
