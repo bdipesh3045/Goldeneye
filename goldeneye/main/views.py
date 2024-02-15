@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.views.decorators.csrf import csrf_exempt
-from .models import Notification
+from .models import Notification, TeamModel
 from django.http import JsonResponse
 
 
@@ -33,10 +33,10 @@ def get_notification_data(request):
 def about(request):
     return render(request, "about.html")
 
-
-def team(request):
-    return render(request, "team.html")
-
+#team model render
+def team_view(request):
+    team_members = TeamModel.objects.all()
+    return render(request, 'team.html',{'team_members': team_members})
 
 def pricing(request):
     return render(request, "pricing.html")

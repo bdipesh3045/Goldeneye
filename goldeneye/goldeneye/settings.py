@@ -85,17 +85,26 @@ WSGI_APPLICATION = "goldeneye.wsgi.application"
 
 # To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
 
+# settings.py
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "goldeneye",
-        "USER": "bdipesh304",
-        "PASSWORD": "se0POHVT9ioG",
-        "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
-        "PORT": "5432",
-        "OPTIONS": {"sslmode": "require"},
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',  # Assuming db.sqlite3 is in the project's base directory
     }
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": "goldeneye",
+#         "USER": "bdipesh304",
+#         "PASSWORD": "se0POHVT9ioG",
+#         "HOST": "ep-jolly-union-45115171.us-east-2.aws.neon.tech",
+#         "PORT": "5432",
+#         "OPTIONS": {"sslmode": "require"},
+#     }
+# }
 
 
 # DATABASES = {

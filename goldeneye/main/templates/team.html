@@ -4,57 +4,65 @@
 <!-- <div class="container text-center">
     <h1>OUR TEAM<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
 </div> -->
+<style>
+	.image-wrapper {
 
+		height: 230px;
+		width: 100%;
+	}
+</style>
 <div class="all-title-box">
 	<div class="container text-center">
 		<h1>Our team<span class="m_1"></span></h1>
 	</div>
 </div>
 <div class="custom-padding">
-    
-    
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <div class="team-area">
-                    <img src="{% static 'images/Shankar_Pokharel_Founder' %}.jpg" alt="">
-                
-                    <div class="social">
-                        
-                        <a href="#" class="fa fa-facebook"></a>
-                        <a href="#" class="fa fa-twitter"></a>
-                        <a href="#" class="fa fa-linkedin"></a>
-                        <a href="#" class="fa fa-phone"></a>
-                        
-                    </div>
-                    <h2>Shankar Pokharel <span>Founder</span></h2>
 
-                </div>
-            </div>
-            <div class="message-box col-md-6 team-box">
-                    
-                <h2 class="text-dark">Welcome to Golden Eye Academy</h2>
-                    
 
-                    <p class=" display-5 text-dark" > We welcome you in the ocean of knowledge to 
-                        dive into it and achieve the best. We facilitate 
-                        you to identify yourself with the best through 
-                        motivational tips, inner engineering skills, 
-                        memory power as well as career counselling. 
-                        You will be enriched with knowledge and 
-                        capacity and be able to glow your cherished aim 
-                        as pearls which you always dreamt for. We help 
-                        you to determine your destination.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit sint molestias laudantium illum ducimus hic voluptates maxime. Assumenda voluptates quo quae modi voluptas, atque eveniet incidunt hic, ducimus numquam accusantium suscipit?</p>
-                   
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="team-area">
+					<img src="{% static 'images/Shankar_Pokharel_Founder' %}.jpg" alt="">
 
-                    <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-            </div><!-- end messagebox -->
-            
-        </div>
-    </div>
+					<div class="social">
+
+						<a href="#" class="fa fa-facebook"></a>
+						<a href="#" class="fa fa-twitter"></a>
+						<a href="#" class="fa fa-linkedin"></a>
+						<a href="#" class="fa fa-phone"></a>
+
+					</div>
+					<h2>Shankar Pokharel <span>Founder</span></h2>
+
+				</div>
+			</div>
+			<div class="message-box col-md-6 team-box">
+
+				<h2 class="text-dark">Welcome to Golden Eye Academy</h2>
+
+
+				<p class=" display-5 text-dark"> We welcome you in the ocean of knowledge to
+					dive into it and achieve the best. We facilitate
+					you to identify yourself with the best through
+					motivational tips, inner engineering skills,
+					memory power as well as career counselling.
+					You will be enriched with knowledge and
+					capacity and be able to glow your cherished aim
+					as pearls which you always dreamt for. We help
+					you to determine your destination.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit sint molestias laudantium illum
+					ducimus hic voluptates maxime. Assumenda voluptates quo quae modi voluptas, atque eveniet incidunt
+					hic, ducimus numquam accusantium suscipit?</p>
+
+
+				<a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+			</div><!-- end messagebox -->
+
+		</div>
+	</div>
 </div>
-<div >
+<div>
 	<div class="container text-center">
 		<h1>Team<span class="m_1">Without them there we wouldnot have come far.</span></h1>
 	</div>
@@ -65,12 +73,15 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/sujata_pokhrel_md' %}.jpg">
+						<div class="image-wrapper">
+							<img src="{% static 'images/sujata_pokhrel_md' %}.jpg">
+						</div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-email"></a></li>
-								
+								<li><a href="#" class="fa fa-envelope"></a></li>
+
 							</ul>
 						</div>
 					</div>
@@ -83,13 +94,15 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/asal' %}.jpg">
+						<div class="image-wrapper">
+							<img src="{% static 'images/asal' %}.jpg">
+						</div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
 								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
+								<li><a href="#" class="fa fa-envelope"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -102,13 +115,12 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/Surrendra Bhattarai' %}.jpg">
+						<div class="image-wrapper"><img src="{% static 'images/Surrendra Bhattarai' %}.jpg"></div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
+								<li><a href="#" class="fa fa-envelope"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -122,13 +134,12 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/pratigya_pun_accountant' %}.jpg">
+						<div class="image-wrapper"><img src="{% static 'images/pratigya_pun_accountant' %}.jpg"></div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
+								<li><a href="#" class="fa fa-envelope"></a></li>
 							</ul>
 						</div>
 					</div>
@@ -142,39 +153,37 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/T1' %}.jpg">
+						<div class="image-wrapper"><img src="{% static 'images/T1' %}.jpg"></div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
+								<li><a href="#" class="fa fa-envelope"></a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="team-content">
-						<h3 class="title">XXXXXXXXXXX</h3>
-						<span class="post">XXXXXXXXXXX</span>
+						<h3 class="title">Shenaz Gurung</h3>
+						<span class="post">Japanese/English Language</span>
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/T2' %}.jpg">
+						<div class="image-wrapper"><img src="{% static 'images/T2' %}.jpg"></div>
+
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
+								<li><a href="#" class="fa fa-envelope"></a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="team-content">
-						<h3 class="title">XXXXXXXXXXX</h3>
-						<span class="post">XXXXXXXXXXX</span>
+						<h3 class="title">Ganga Poudel</h3>
+						<span class="post">XX</span>
 					</div>
 				</div>
 			</div>
@@ -185,7 +194,7 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
-						<img src="{% static 'images/asal' %}.jpg">
+						<img src="{% static 'images/asal' %}.jpg" style="width:250px">
 						<div class="social">
 							<ul>
 								<li><a href="#" class="fa fa-facebook"></a></li>
@@ -221,7 +230,7 @@
 					</div>
 				</div>
 			</div>
- 
+
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="our-team">
 					<div class="team-img">
@@ -243,5 +252,34 @@
 			</div> {% endcomment %}
 		</div><!-- end row -->
 	</div><!-- end container -->
-</div><!-- end section -->	
+</div><!-- end section -->
+{% comment %}
+<!-- 
+<div id="teachers" class="section wb">
+	<div class="container">
+		<div class="row">
+			{%for member in team_members %}
+			<div class="col-lg-3 col-md-6 col-12">
+				<div class="our-team">
+					<div class="team-img">
+						<img src="{{ member.image.url }}" alt="{{ member.first_name }} {{ member.last_name }}">
+						<div class="social">
+							<ul>
+								<li><a href="{{ member.facebook }}" class="fa fa-facebook"></a></li>
+								<li><a href="mailto:{{ member.email }}" class="fa fa-envelope"></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="team-content">
+						<h3 class="title">{{ member.first_name }} {{ member.last_name }}</h3>
+						<span class="post">{{ member.post }}</span>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div> -->
+{% endcomment %}
+
 {% endblock content %}
