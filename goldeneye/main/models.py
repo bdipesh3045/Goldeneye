@@ -43,6 +43,7 @@ class Notification(models.Model):
         ordering = ["-date"]
 
 
+<<<<<<< HEAD
 class FAQ(models.Model):
     question = models.TextField()
     answer = models.TextField()
@@ -53,3 +54,17 @@ class FAQ(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+#Team Model
+class TeamModel(models.Model):
+    id = models.AutoField(primary_key=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    post=models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    facebook = models.CharField(max_length=255)
+    image =  models.CharField(max_length=100)
+
+    def __str__(self):
+        return f"{self.id}: {self.first_name} {self.last_name} - {self.post}"
+

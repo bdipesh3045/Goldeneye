@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .forms import ContactForm
 from django.views.decorators.csrf import csrf_exempt
-from .models import Notification, FAQ
+from .models import Notification, TeamModel, FAQ
 from django.http import JsonResponse
 from django.core.cache import cache
 
@@ -36,9 +36,11 @@ def get_notification_data(request):
         if most_recent_notification:
             data = {
                 "message": most_recent_notification.message,
-                "image_url": most_recent_notification.image.url
-                if most_recent_notification.image
-                else None,
+                "image_url": (
+                    most_recent_notification.image.url
+                    if most_recent_notification.image
+                    else None
+                ),
             }
             cache.set("most_recent_notification_data", data, timeout=60 * 5)
             return JsonResponse(data)
@@ -50,8 +52,10 @@ def about(request):
     return render(request, "about.html")
 
 
-def team(request):
-    return render(request, "team.html")
+# team model render
+def team_view(request):
+    team_members = TeamModel.objects.all()
+    return render(request, "team.html", {"team_members": team_members})
 
 
 def pricing(request):
