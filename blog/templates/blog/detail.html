@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}
+<div class="all-title-box">
+    <div class="container text-center">
+        <h1>Blog<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
+    </div>
+</div>
+{% endblock page_title %}
+
+{% block page_content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 blog-post-single">
+                <div class="blog-item">
+                    <div class="image-blog">
+                        <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-fluid" style="height: 378px; width: 783px;">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-date">
+                            <span class="day">{{ post.created_on.day }}</span>
+                            <span class="month">{{ post.created_on|date:"M" }}</span>
+                        </div>
+                        <div class="meta-info-blog">
+                            <span><i class="fa fa-calendar"></i> <a href="#">{{ post.created_on|date:"F d, Y" }}</a></span>
+                            <span><i class="fa fa-tag"></i> {% for category in post.categories.all %}<a href="{% url 'blog_category' category.name %}">{{ category.name }}</a>{% if not forloop.last %}, {% endif %}{% endfor %}</span>
+                            <span><i class="fa fa-comments"></i> {{ comments.count }} Comments</span>
+                        </div>
+                        <div class="blog-title">
+                            <h2>{{ post.title }}</h2>
+                        </div>
+                        <div class="blog-desc">
+                            <p>{{ post.body | linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div class="blog-comments">
+                    <h4>Comments ({{ comments.count }})</h4>
+                    <div id="comment-blog">
+                        <ul class="comment-list">
+                            {% for comment in comments %}
+                                <li class="comment">
+                                    <!-- <div class="avatar"><img alt="" src="{% static 'images/avatar-01.jpg' %}" class="avatar"></div> -->
+                                    <div class="comment-container">
+                                        <h5 class="comment-author">{{ comment.author }}</h5>
+                                        <div class="comment-meta">
+                                            <a href="#" class="comment-date link-style1">{{ comment.created_on|date:"F d, Y" }}</a>
+                                            <!-- <a class="comment-reply-link link-style3" href="#respond">Reply »</a> -->
+                                        </div>
+                                        <div class="comment-body">
+                                            <p>{{ comment.body | linebreaks }}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Comment Form -->
+                {% if request.user.is_authenticated %}
+                <div class="comments-form">
+                    <h4>Leave a comment</h4>
+                    <div class="comment-form-main">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row">
+        
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" placeholder="Message" id="commenter-message" cols="30" rows="2"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 post-btn">
+                                    <button class="hover-btn-new orange"><span>Post Comment</span></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            
+
+            
+
+
+
+{% else %}
+<div style="font-family: 'Arial', sans-serif; text-align: center; margin-top: 50px;">
+
+    <a href="{% url 'login' %}" style="text-decoration: none; color: #007bff; font-size: 20px; display: block; margin-bottom: 10px;">Click Here to Login</a>
+
+    <p style="font-size: 16px; color: #6c757d;">If you don't have an account: <a href="{% url 'signup' %}" style="text-decoration: none; color: #28a745; font-weight: bold;">Signup</a></p>
+
+</div>
+{% endif %}
+</div><!-- end col -->
+<!-- Sidebar -->
+<div class="col-lg-3 col-12 right-single">
+    <!-- Add your sidebar content here -->
+</div>
+</div><!-- end row -->
+</div><!-- end container -->
+
+
+{% endblock page_content %}
