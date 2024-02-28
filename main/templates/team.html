@@ -1,260 +1,393 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<!-- <div class="container text-center">
+  <!--               <div class="container text-center">
     <h1>OUR TEAM<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
-</div> -->
-<style>
-	.image-wrapper {
+</div>               -->
+  <style>
+    .image-wrapper {
+      height: 250px;
+    }
+    
+    .our-team {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .our-team .team-img {
+      overflow: hidden;
+      position: relative;
+    }
+    .our-team .team-img img {
+      width: 100%;
+    
+      border-radius: 15px;
+    }
+    .our-team .social {
+      width: 100%;
+      height: 30%;
+      background: rgba(238, 164, 18, 0.9);
+      position: absolute;
+      top: 50%;
+      left: 0;
+      opacity: 0;
+      border-radius: 100%;
+      transform: translateY(-50%) rotate(-30deg);
+      transition: all 0.3s ease 0s;
+    }
+    .our-team:hover .social {
+      height: 100%;
+      opacity: 1;
+      border-radius: 0px;
+      transform: translateY(-50%) rotate(0deg);
+    }
+    .our-team .social ul {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 45%;
+      left: 0;
+    }
+    .our-team .social ul li {
+      display: inline-block;
+    }
+    .our-team .social ul li a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      border-radius: 50%;
+      font-size: 17px;
+      color: #fff;
+      margin-left: 10px;
+      background: #212121;
+      transition: all 0.3s ease 0s;
+    }
+    .our-team .social ul li a:hover {
+      background: #fff;
+      color: #f3904d;
+    }
+    .our-team .team-content {
+      padding: 20px 0;
+      background: #f5f7f8;
+      color: #54478a;
+    }
+    .our-team .title {
+      display: block;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 7px 0;
+      padding: 0px;
+    }
+    .our-team .post {
+      display: block;
+      font-size: 15px;
+      color: #999;
+    }
+    .our-team:hover .team-content {
+      background: #080808;
+    }
+    .our-team:hover .team-content .title {
+      color: wheat;
+    }
+    .our-team:hover .post {
+      color: #f3904d;
+    }
+    
+    @media only screen and (max-width: 990px) {
+      .our-team {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+  <div class="all-title-box">
+    <div class="container text-center">
+      <h1>Our team<span class="m_1"></span></h1>
+    </div>
+  </div>
+  <div class="custom-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="team-area">
+            <img src="{% static 'images/Shankar_Pokharel_Founder' %}.jpg" alt="" />
 
-		height: 230px;
-		width: 100%;
-	}
-</style>
-<div class="all-title-box">
-	<div class="container text-center">
-		<h1>Our team<span class="m_1"></span></h1>
-	</div>
-</div>
-<div class="custom-padding">
+            <div class="social">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-linkedin"></a>
+              <a href="#" class="fa fa-phone"></a>
+            </div>
+            <h2>Shankar Pokharel <span>Founder</span></h2>
+          </div>
+        </div>
+        <div class="message-box col-md-6 team-box">
+          <h2 class="text-dark">Welcome to Golden Eye Academy</h2>
 
+          <p class="display-5 text-dark">We welcome you in the ocean of knowledge to dive into it and achieve the best. We facilitate you to identify yourself with the best through motivational tips, inner engineering skills, memory power as well as career counselling. You will be enriched with knowledge and capacity and be able to glow your cherished aim as pearls which you always dreamt for. We help you to determine your destination. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit sint molestias laudantium illum ducimus hic voluptates maxime. Assumenda voluptates quo quae modi voluptas, atque eveniet incidunt hic, ducimus numquam accusantium suscipit?</p>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-6">
-				<div class="team-area">
-					<img src="{% static 'images/Shankar_Pokharel_Founder' %}.jpg" alt="">
+          <a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+        </div>
+        <!-- end messagebox -->
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="container text-center">
+      <h1>Team<span class="m_1">Without them there we wouldnot have come far.</span></h1>
+    </div>
+  </div>
+  <div id="teachers" class="section wb">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/sujata_pokhrel_md' %}.jpg" />
+              </div>
 
-					<div class="social">
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Sujata Pokhrel</h3>
+              <span class="post">Managing Director</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/asal' %}.jpg" />
+              </div>
 
-						<a href="#" class="fa fa-facebook"></a>
-						<a href="#" class="fa fa-twitter"></a>
-						<a href="#" class="fa fa-linkedin"></a>
-						<a href="#" class="fa fa-phone"></a>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Asal Pandey</h3>
+              <span class="post">General Manager</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/Surrendra Bhattarai' %}.jpg" />
+              </div>
 
-					</div>
-					<h2>Shankar Pokharel <span>Founder</span></h2>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Surrendra Bhattarai</h3>
+              <span class="post">Manager</span>
+            </div>
+          </div>
+        </div>
 
-				</div>
-			</div>
-			<div class="message-box col-md-6 team-box">
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/pratigya_pun_accountant' %}.jpg" />
+              </div>
 
-				<h2 class="text-dark">Welcome to Golden Eye Academy</h2>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Pratigya Pun</h3>
+              <span class="post">Accountant</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/T1' %}.jpg" />
+              </div>
 
-				<p class=" display-5 text-dark"> We welcome you in the ocean of knowledge to
-					dive into it and achieve the best. We facilitate
-					you to identify yourself with the best through
-					motivational tips, inner engineering skills,
-					memory power as well as career counselling.
-					You will be enriched with knowledge and
-					capacity and be able to glow your cherished aim
-					as pearls which you always dreamt for. We help
-					you to determine your destination.
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sit sint molestias laudantium illum
-					ducimus hic voluptates maxime. Assumenda voluptates quo quae modi voluptas, atque eveniet incidunt
-					hic, ducimus numquam accusantium suscipit?</p>
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Shenaz Gurung</h3>
+              <span class="post">Japanese/English Language</span>
+            </div>
+          </div>
+        </div>
 
+        <div class="col-lg-4 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <div class="image-wrapper">
+                <img src="{% static 'images/T2' %}.jpg" />
+              </div>
 
-				<a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
-			</div><!-- end messagebox -->
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-envelope"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Ganga Poudel</h3>
+              <span class="post">XX</span>
+            </div>
+          </div>
+        </div>
+        {% comment %}
+        <div class="container text-center">
+          <h1>IT Team<span class="m_1"></span></h1>
+        </div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <img src="{% static 'images/asal' %}.jpg" style="width:250px" />
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-skype"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Asal Pandey</h3>
+              <span class="post"></span>
+            </div>
+          </div>
+        </div>
 
-		</div>
-	</div>
-</div>
-<div>
-	<div class="container text-center">
-		<h1>Team<span class="m_1">Without them there we wouldnot have come far.</span></h1>
-	</div>
-</div>
-<div id="teachers" class="section wb">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper">
-							<img src="{% static 'images/sujata_pokhrel_md' %}.jpg">
-						</div>
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <img src="{% static 'images/team-03' %}.png" />
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-skype"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Dipesh Pokharel</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div>
 
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Sujata Pokhrel</h3>
-						<span class="post">Managing Director</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper">
-							<img src="{% static 'images/asal' %}.jpg">
-						</div>
-
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Asal Pandey</h3>
-						<span class="post">General Manager</span>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper"><img src="{% static 'images/Surrendra Bhattarai' %}.jpg"></div>
-
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Surrendra Bhattarai</h3>
-						<span class="post">Manager</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper"><img src="{% static 'images/pratigya_pun_accountant' %}.jpg"></div>
-
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Pratigya Pun</h3>
-						<span class="post">Accountant</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper"><img src="{% static 'images/T1' %}.jpg"></div>
-
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Shenaz Gurung</h3>
-						<span class="post">Japanese/English Language</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<div class="image-wrapper"><img src="{% static 'images/T2' %}.jpg"></div>
-
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-envelope"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Ganga Poudel</h3>
-						<span class="post">XX</span>
-					</div>
-				</div>
-			</div>
-			{% comment %}
-			<div class="container text-center">
-				<h1>IT Team<span class="m_1"></span></h1>
-			</div>
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<img src="{% static 'images/asal' %}.jpg" style="width:250px">
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Asal Pandey</h3>
-						<span class="post"></span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<img src="{% static 'images/team-03' %}.png">
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Dipesh Pokharel</h3>
-						<span class="post">Web Developer</span>
-					</div>
-				</div>
-			</div>
-
-			<div class="col-lg-3 col-md-6 col-12">
-				<div class="our-team">
-					<div class="team-img">
-						<img src="{% static 'images/team-04' %}.png">
-						<div class="social">
-							<ul>
-								<li><a href="#" class="fa fa-facebook"></a></li>
-								<li><a href="#" class="fa fa-twitter"></a></li>
-								<li><a href="#" class="fa fa-linkedin"></a></li>
-								<li><a href="#" class="fa fa-skype"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="team-content">
-						<h3 class="title">Surin Poudel</h3>
-						<span class="post">Web Developer</span>
-					</div>
-				</div>
-			</div> {% endcomment %}
-		</div><!-- end row -->
-	</div><!-- end container -->
-</div><!-- end section -->
-{% comment %}
-<!-- 
+        <div class="col-lg-3 col-md-6 col-12">
+          <div class="our-team">
+            <div class="team-img">
+              <img src="{% static 'images/team-04' %}.png" />
+              <div class="social">
+                <ul>
+                  <li>
+                    <a href="#" class="fa fa-facebook"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-twitter"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-linkedin"></a>
+                  </li>
+                  <li>
+                    <a href="#" class="fa fa-skype"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="team-content">
+              <h3 class="title">Surin Poudel</h3>
+              <span class="post">Web Developer</span>
+            </div>
+          </div>
+        </div> {% endcomment %}
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end section -->
+  {% comment %}
+  <!--               
 <div id="teachers" class="section wb">
 	<div class="container">
 		<div class="row">
@@ -279,7 +412,6 @@
 			{% endfor %}
 		</div>
 	</div>
-</div> -->
-{% endcomment %}
-
-{% endblock content %}
+</div>               -->
+  {% endcomment %}
+{% endblock %}
