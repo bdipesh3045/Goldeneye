@@ -808,7 +808,7 @@ SERVICES FOR HOME
 ----------------------------------------------------------*/
 
 .service-container{
-    background-color: rgb(220, 152, 15);
+
     font-family: 'Poppins', sans-serif;
 }
 .service-section-header{
@@ -821,7 +821,7 @@ SERVICES FOR HOME
     border: 1px solid #f7db60;
     text-align: center;
     background-color: rgb(243, 180, 64);
-    
+    box-shadow: 10px 10px 8px #888888;
 }
 
 .service-bg{
@@ -830,7 +830,7 @@ SERVICES FOR HOME
     
 }
 .service-bg-1{
-    background: url("../images/preparation.jpg");
+    background: url("../images/study.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
