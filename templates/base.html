@@ -34,7 +34,7 @@
     <!-- Custom CSS 
     <link rel="stylesheet" href="/css/custom.css">
 
-    <!-- Modernizer for Portfolio -->
+     Modernizer for Portfolio -->
     <script src="{% static 'js/modernizer.js' %}"></script>
 
     <!--[if lt IE 9]>
@@ -58,25 +58,33 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="{% url 'home_page' %}">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'course2' %}">Services</a></li>
-						
-						</li> 
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'blog' %}">Blog </a>
-                        
-
-								<a class="dropdown-item" href="{% url 'blog_category' category='News' %}">Announcement </a>
-							</div>
-						</li>
-						 <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Team</a></li>
-						<!--<li class="nav-item"><a class="nav-link" href="{% url 'price' %}">Pricing</a></li> -->
-						<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                        <li  class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
-					</ul>
+                        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'about/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'services/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'course2' %}">Services</a>
+                        </li>
+                        <li class="nav-item dropdown {% if request.path == 'blog/' or request.path == 'blog_category/News/' %}active{% endif %}">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="{% url 'blog' %}">Blog</a>
+                                <a class="dropdown-item" href="{% url 'blog_category' category='News' %}">Announcement</a>
+                            </div>
+                        </li>
+                        <li class="nav-item {% if request.path == 'team/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'team' %}">Team</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'contact/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li class="nav-item {% if request.path == 'faq/' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                        </li>
+                    </ul>
+                    
 					<!-- <ul class="nav navbar-nav navbar-right">
                         <li><a class="hover-btn-new log orange" href="{% url 'student_home' %}" data-toggle="modal" data-target="#login"><span>Student Login</span></a></li>
                     </ul> -->
