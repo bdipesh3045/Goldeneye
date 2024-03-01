@@ -830,7 +830,7 @@ SERVICES FOR HOME
     
 }
 .service-bg-1{
-    background: url("../images/Class.jpg");
+    background: url("../images/comp.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -3903,7 +3903,7 @@ a.link-style3 {
 
 .course-item{
 	background: #ffffff;
-    
+    border:none;
 
 }
 .course-item{
