@@ -9,6 +9,7 @@ urlpatterns = [
     path("price/", views.pricing, name="price"),
     path("contact/", views.contact, name="contact"),
     path("services/", views.course2, name="course2"),
+    path("services/preparation", views.preparation, name="preparation"),
     path("faq/", views.faq_view, name="faq"),
      path("google509ac1021dca925d.html/", views.google, name="google"),
     

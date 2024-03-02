@@ -822,10 +822,12 @@ SERVICES FOR HOME
     text-align: center;
     background-color: rgb(243, 180, 64);
     box-shadow: 10px 10px 8px #888888;
+    height: 500px;
+ 
 }
 
 .service-bg{
-    height: 200px;
+    height: 300px;
     position: relative;
     
 }
@@ -891,7 +893,7 @@ SERVICES FOR HOME
 }
 .btn-area{
     display:inline-block;
-    color:#fcf4d4;
+    color: #f7db60;
     font-size: 23px;
     font-weight: 500;
     margin-top: 30px;
@@ -2930,7 +2932,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {
@@ -3903,7 +3905,7 @@ a.link-style3 {
 
 .course-item{
 	background: #ffffff;
-    
+    border:none;
 
 }
 .course-item{

@@ -34,7 +34,7 @@
     <!-- Custom CSS 
     <link rel="stylesheet" href="/css/custom.css">
 
-    <!-- Modernizer for Portfolio -->
+     Modernizer for Portfolio -->
     <script src="{% static 'js/modernizer.js' %}"></script>
 
     <!--[if lt IE 9]>
@@ -57,30 +57,35 @@
                     <span class="icon-bar"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active"><a class="nav-link" href="{% url 'home_page' %}">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'course2' %}">Services</a></li>
-						
-						</li> 
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog </a>
-							<div class="dropdown-menu" aria-labelledby="dropdown-a">
-								<a class="dropdown-item" href="{% url 'blog' %}">Blog </a>
-                        
-
-								<a class="dropdown-item" href="{% url 'blog_category' category='News' %}">Announcement </a>
-							</div>
-						</li>
-						 <li class="nav-item"><a class="nav-link" href="{% url 'team' %}">Team</a></li>
-						<!--<li class="nav-item"><a class="nav-link" href="{% url 'price' %}">Pricing</a></li> -->
-						<li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
-                        <li  class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
-					</ul>
-					<!-- <ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange" href="{% url 'student_home' %}" data-toggle="modal" data-target="#login"><span>Student Login</span></a></li>
-                    </ul> -->
-				</div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'home_page' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'home_page' %}">Home</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'course2' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'course2' %}">Services</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'blog_category' %}active{% endif %}">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" href="{% url 'blog' %}">Blog</a>
+                                <a class="dropdown-item" href="{% url 'blog_category' category='News' %}">Announcement</a>
+                            </div>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'team' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'team' %}">Team</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                        <li class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
+                            <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                
 			</div>
 		</nav>
 	</header>
@@ -136,7 +141,7 @@
 							<ul class="footer-links-soi">
 								<li><a href="https://www.facebook.com/goldeneyeacademy"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://www.linkedin.com/company/golden-eye-academy"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-instagram"></i></a></li>
+								<li><a href="https://www.instagram.com/goldeneye.academy/"><i class="fa fa-instagram"></i></a></li>
 								
 							</ul><!-- end links -->
 						</div>						
