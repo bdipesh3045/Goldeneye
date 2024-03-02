@@ -822,15 +822,17 @@ SERVICES FOR HOME
     text-align: center;
     background-color: rgb(243, 180, 64);
     box-shadow: 10px 10px 8px #888888;
+    height: 500px;
+ 
 }
 
 .service-bg{
-    height: 200px;
+    height: 300px;
     position: relative;
     
 }
 .service-bg-1{
-    background: url("../images/class11.jpg");
+    background: url("../images/Class.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -891,7 +893,7 @@ SERVICES FOR HOME
 }
 .btn-area{
     display:inline-block;
-    color:#fcf4d4;
+    color: #f7db60;
     font-size: 23px;
     font-weight: 500;
     margin-top: 30px;
