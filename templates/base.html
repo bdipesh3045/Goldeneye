@@ -58,29 +58,29 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
 					<ul class="navbar-nav ml-auto">
-                        <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'home_page' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'home_page' %}">Home</a>
                         </li>
-                        <li class="nav-item {% if request.path == 'about/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'about' %}">About Us</a>
                         </li>
-                        <li class="nav-item {% if request.path == 'services/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'course2' %}">Services</a>
                         </li>
-                        <li class="nav-item dropdown {% if request.path == 'blog/' or request.path == 'blog_category/News/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'blog_category' %}active{% endif %}">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-a">
                                 <a class="dropdown-item" href="{% url 'blog' %}">Blog</a>
                                 <a class="dropdown-item" href="{% url 'blog_category' category='News' %}">Announcement</a>
                             </div>
                         </li>
-                        <li class="nav-item {% if request.path == 'team/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'team' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'team' %}">Team</a>
                         </li>
-                        <li class="nav-item {% if request.path == 'contact/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                         </li>
-                        <li class="nav-item {% if request.path == 'faq/' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'faq' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
                         </li>
                     </ul>
