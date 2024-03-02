@@ -2,114 +2,279 @@
 {% load static %}
 {% block content %}
 
-<style>
-    .course-item {
-        height: 90%; /* Adjust the height as per your preference */
-        margin-bottom: 20px;
-    }
 
-</style>
-
-<div class="all-title-box">
-	<div class="container text-center">
-		<h1>Our Services<span class="m_1">Lorem Ipsum dolroin gravida nibh vel velit.</span></h1>
-	</div>
-</div>
-
-
-<div id="overviews" class="section wb">
-    <div class="container">
-    
-        <!-- Abroad Study -->
-        <div class="row"> 
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="course-item">
-                    <div class="image-blog">
-                        <img id ="new" src="{% static 'images/class11.jpg' %}" alt="" class="img-fluid">
-                    </div>
-                    <div class="course-br">
-                        <div class="course-title">
-                            <h2><a href="#" title="">Abroad Study</a></h2>
-                        </div>
-                        <div class="course-desc">
-                            <p>
-                                - IELTS/TOFEL/CAE<br>
-                                - USA, UK, New Zealand, Australia, Japan, Finland and many more...
+    <style>
+        .service-page{
+            width: 100%;
+            height: 100%; 
+            position: relative;
+            overflow: hidden;
+        }
+        .button-box{
+            display:flex;
+            border-bottom: 1px solid #E5B80B;
+            flex-wrap: wrap;
+        }
+        .button-box button{
+            background: transparent;
+            border: none;
+            outline:none;
+            cursor: pointer;
+            padding: 14px 16px;
+            margin-right: 50px;
+            font-size: 20px;
+            font-weight:bold;
+        }
+        .button-box svg{
+            margin-right:20px;
+        }
+        .button-box button:hover svg{
+            color: #ff7846;
+        }
+        .content-right img{
+            width: 100%;
+            max-width: 600px;
+            border-radius: 100px;
+            box-shadow: 10px 10px 8px #888888;
+        }
+        .service-content{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            margin: 5% auto;
+            position: absolute;
+            transform: translateX(110%);
+            transition: 0.2s;
+        }
+        .content-left{
+            flex-basis:50%;
+        }
+        .content-left p{
+            font-size:15px;
+            padding: 30px 0;
+            margin-right: 20px;
+        }
+        .content-right{
+            flex-basis:50%;
+            text-align:center;
+        }
+        #service_content1{
+            transform: translateX(0px);
+        }
+        #button1{
+            color: #ff7846;
+        }
+        /* Media query for smaller screens */
+        @media (max-width: 1008px) {
+            .service-page{
+                height:140%;
+            }
+            .service-content{
+                display:block;
+                margin: auto;
+            }
+            .content-right img{
+                margin-left: -13px;
+            }
+            .button-box button{
+                padding:10px 0px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <div class="service-page container-fluid">
+            <div class="button-box">
+                <button id = "button1" onclick="openAboard()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-airplane-fill" viewBox="0 0 16 16">
+                        <path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849"/>
+                      </svg>
+                    Aboard Study </button>
+                <button id = "button2" onclick="openLanguage()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+                        <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+                        <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/>
+                      </svg>
+                    भाषाका कक्षाहरू (Language Classes)
+                 </button>
+                <button id = "button3" onclick="openPreparation()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-highlighter" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.096.644a2 2 0 0 1 2.791.036l1.433 1.433a2 2 0 0 1 .035 2.791l-.413.435-8.07 8.995a.5.5 0 0 1-.372.166h-3a.5.5 0 0 1-.234-.058l-.412.412A.5.5 0 0 1 2.5 15h-2a.5.5 0 0 1-.354-.854l1.412-1.412A.5.5 0 0 1 1.5 12.5v-3a.5.5 0 0 1 .166-.372l8.995-8.07zm-.115 1.47L2.727 9.52l3.753 3.753 7.406-8.254zm3.585 2.17.064-.068a1 1 0 0 0-.017-1.396L13.18 1.387a1 1 0 0 0-1.396-.018l-.068.065zM5.293 13.5 2.5 10.707v1.586L3.707 13.5z"/>
+                      </svg>
+                    तयारी कक्षा (Preparation Classes) 
+                </button>
+                <button id = "button4" onclick="openComputer()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 16 16">
+                        <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+                      </svg>
+                    Computer Classes
+                </button>
+            </div>
+            <div id="service_content1" class="service-content">
+                <div class="content-left">
+                    <h1>Abroad Study</h1>
+                        <div class="slide-desc">
+                            <p align="justify">
+                                "Golden Eye Academy: Your Gateway to Excellent 
+                                Worldwide Education! Our advisory service focuses 
+                                on directing students to globally recognized universities.
+                                 We make sure that every student gets the attention and 
+                                 assistance they require to achieve by using a personalized 
+                                 approach. We are dedicated to ensuring that your study 
+                                 abroad experience is smooth and fulfilling, from help 
+                                 with applications to advice regarding visas. Put your 
+                                 faith in Golden Eye Academy to assist you in fulfilling
+                                  your academic goals."
+                                <ul>
+                                    <li> USA </li>
+                                    <li> UK </li>
+                                    <li> New Zealand </li>
+                                    <li> Australia </li>
+                                    <li> Japan </li>
+                                    <li> Finland </li>
+                                </ul>
                             </p>
                         </div>
-                    </div>
                 </div>
-            </div><!-- end col -->
-
-            <!-- Computer Classes -->
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="course-item">
-                    <div class="image-blog">
-                        <img id ="new" src="{% static 'images/computer.jfif' %}" alt="" class="img-fluid">
-                    </div>
-                    <div class="course-br">
-                        <div class="course-title">
-                            <h2><a href="#" title="">Computer Classes</a></h2>
-                        </div>
-                        <div class="blog-desc">
-                            <p>
-                                - Basic / Diploma Course<br>
-                                - Graphic/Web Designing<br>
-                                - Accounting Package<br>
-                                - Hardware & Networking<br>
-                                - Programming C, C++, Java, Php etc
-                            </p>
-                        </div>
-                    </div>
+                <div class="content-right">
+                    <img src="../static/images/preparation.jpg">
                 </div>
-            </div><!-- end col -->
-        </div><!-- end row -->
+            </div>
 
-        <!-- Language and Preparation Classes -->
-        <div class="row"> 
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="course-item">
-                    <div class="image-blog">
-                        <img  id ="new" src="{% static 'images/blog_5.jpg' %}" alt="" class="img-fluid">
-                    </div>
-                    <div class="course-br">
-                        <div class="course-title">
-                            <h2><a href="#" title="">तयारी कक्षा (Preparation Classes)</a></h2>
-                        </div>
-                        <div class="course-desc">
-                            <p>
-                                - लोकसेवा आयोगः ना.सु खरिदार, अधिकृत (Public Service Commission: Assistant Subba, Kharidar, Officer)<br>
-                                - शिक्षक सेवाः मा.वि., नि.मा.वि, प्रा.वि. (Teacher Service: Secondary School, Lower Secondary School, Primary School)<br>
-                                - बैकिङ सेवाः राष्ट्रबैक, वाणिज्य बैंक, नेपाल बैंक (Banking services: Rastra Bank, Commercial Bank, Nepal Bank)<br>
-                                - प्रहरी तथा सैनिक सेवा आदि । (Police and Military Services, etc.)
+            <div id="service_content2" class="service-content">
+                <div class="content-left">
+                    <h1>भाषाका कक्षाहरू (Language Classes)</h1>
+                        <div class="slide-desc">
+                            <p align="justify">
+                                "Golden Eye Academy: Your Gateway to Fluency
+                                 in Multiple Languages! To meet your language
+                                  goals, our advisory service provides a variety
+                                   of language classes. We offer courses in a 
+                                   variety of languages, for both beginning and experienced students. Our skilled teachers provide hands-on learning opportunities with an emphasis on speaking, listening, reading, and writing. Take the first step toward fluency by enrolling at Golden Eye Academy."
+                                
+                                <ul>
+                                    <li> IELTS/TOFEL</li>
+                                    <li> Basic / Advance English </li>
+                                    <li> Intermediate/SALSA English </li>
+                                   
+                                </ul>
                             </p>
                         </div>
-                    </div>
-                </div>    
-            </div><!-- end col -->
-
-            <div class="col-lg-6 col-md-6 col-12">
-                <div class="course-item">
-                    <div class="image-blog">
-                        <img id ="new"  src="{% static 'images/Class.jpg' %}" alt="" class="img-fluid">
-                    </div>
-                    <div class="course-br">
-                        <div class="course-title">
-                            <h2><a href="#" title="">भाषाका कक्षाहरू (Language Classes)</a></h2>
-                        </div>
-                        <div class="blog-desc">
-                            <br>
-                                - कोरियन, जापानिज हिब्रु, चाईनिज जर्मनी आदि (Korean, Japanese, Hebrew, Chinese, German, English etc.)</br>
-                                - Basic / Advance English<br>
-                                - Intermediate/SALSA English
-                            </p>
-                        </div>
-                    </div>
                 </div>
-                
-            </div><!-- end col -->
-        </div><!-- end row -->
-    </div><!-- end container -->
-</div><!-- end section -->
+                <div class="content-right">
+                    <img src="../static/images/study.jpg">
+                </div>
+            </div>
+
+            <div id="service_content3" class="service-content">
+                <div class="content-left">
+                    <h1>तयारी कक्षा (Preparation Classes)</h1>
+                        <div class="slide-desc">
+                            <p align="justify">
+                                "Golden Eye Academy: The Key to Beating the Competition in Exams! Comprehensive study sessions for a variety of competitive tests are provided by our consulting service. You can succeed in these tests by using the resources and professional advice that our knowledgeable instructors offer. We are here to support you at every stage of your career, whether your goal is to work in education, public service, banking, law enforcement, or the military. Enroll at Golden Eye Academy, and we'll assist you in reaching your objectives.
+                                <ul>
+                                    <li> लोकसेवा आयोगः ना.सु खरिदार, अधिकृत (Public Service Commission: Assistant Subba, Kharidar, Officer) </li>
+                                    <li> शिक्षक सेवाः मा.वि., नि.मा.वि, प्रा.वि. (Teacher Service: Secondary School, Lower Secondary School, Primary School) </li>
+                                    <li> बैकिङ सेवाः राष्ट्रबैक, वाणिज्य बैंक, नेपाल बैंक (Banking services: Rastra Bank, Commercial Bank, Nepal Bank)</li>
+                                    <li> प्रहरी तथा सैनिक सेवा आदि । (Police and Military Services, etc.)</li>
+                                </ul>
+                            </p>
+                        </div>
+                </div>
+                <div class="content-right">
+                    <img src="../static/images/Class.jpg">
+                </div>
+            </div>
+
+            <div id="service_content4" class="service-content">
+                <div class="content-left">
+                    <h1>Computer Classes</h1>
+                        <div class="slide-desc">
+                            <p align="justify">
+                                "Golden Eye Academy: Providing You with State-of-the-Art Computer Knowledge! We provide a variety of computer classes through our consulting service that are intended to provide you the most up-to-date information and abilities in the industry. We offer a course for everyone, whether you're a novice trying to pick up the fundamentals or an accomplished professional looking to expand your knowledge. Our knowledgeable professors offer individualized coaching and practical instruction in a variety of subjects, including web development, data science, cybersecurity, and programming languages like Python and Java, to ensure your success. Sign up for Golden Eye Academy to realize your full potential in the computer industry."
+                                <ul>
+                                    <li> Basic / Diploma Course </li>
+                                    <li> Graphic/Web Designing </li>
+                                    <li> Accounting Package</li>
+                                    <li> Hardware & Networking </li>
+                                    <li> Programming C, C++, Java, Php </li>
+                                </ul>
+                            </p>
+                        </div>
+                </div>
+                <div class="content-right">
+                    <img src="../static/images/comp.jpg">
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var service_content1= document.getElementById("service_content1");
+            var service_content2= document.getElementById("service_content2");
+            var service_content3= document.getElementById("service_content3");
+            var service_content4= document.getElementById("service_content4");
+            var button1 = document.getElementById("button1");
+            var button2 = document.getElementById("button2");
+            var button3 = document.getElementById("button3");
+            var button4 = document.getElementById("button4");
+
+            function openAboard(){
+                service_content1.style.transform = "translateX(0)";
+                service_content2.style.transform = "translateX(110%)";
+                service_content3.style.transform = "translateX(110%)";
+                service_content4.style.transform = "translateX(110%)";
+                button1.style.color="#ff7846";
+                button2.style.color="#000";
+                button3.style.color="#000";
+                button4.style.color="#000";
+                service_content1.style.transitionDelay="0.2s";
+                service_content2.style.transitionDelay="0s";
+                service_content3.style.transitionDelay="0s";
+                service_content4.style.transitionDelay="0s";
+            }
+            function openLanguage(){
+                service_content1.style.transform = "translateX(110%)";
+                service_content2.style.transform = "translateX(0)";
+                service_content3.style.transform = "translateX(110%)";
+                service_content4.style.transform = "translateX(110%)";
+                button2.style.color="#ff7846";
+                button1.style.color="#000";
+                button3.style.color="#000";
+                button4.style.color="#000";
+                service_content1.style.transitionDelay="0s";
+                service_content2.style.transitionDelay="0.2s";
+                service_content3.style.transitionDelay="0s";
+                service_content4.style.transitionDelay="0s";
+            }
+            function openPreparation(){
+                service_content1.style.transform = "translateX(110%)";
+                service_content2.style.transform = "translateX(110%)";
+                service_content3.style.transform = "translateX(0)";
+                service_content4.style.transform = "translateX(110%)";
+                button3.style.color="#ff7846";
+                button2.style.color="#000";
+                button1.style.color="#000";
+                button4.style.color="#000";
+                service_content1.style.transitionDelay="0s";
+                service_content2.style.transitionDelay="0s";
+                service_content3.style.transitionDelay="0.2s";
+                service_content4.style.transitionDelay="0s";
+            }
+            function openComputer(){
+                service_content1.style.transform = "translateX(110%)";
+                service_content2.style.transform = "translateX(110%)";
+                service_content3.style.transform = "translateX(110%)";
+                service_content4.style.transform = "translateX(0)";
+                button4.style.color="#ff7846";
+                button2.style.color="#000";
+                button3.style.color="#000";
+                button1.style.color="#000";
+                service_content1.style.transitionDelay="0s";
+                service_content2.style.transitionDelay="0s";
+                service_content3.style.transitionDelay="0s";
+                service_content4.style.transitionDelay="0.2s";
+            }
+        </script>
+  
 
 {% endblock content %}

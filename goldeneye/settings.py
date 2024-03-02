@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     "main",
     "blog",
     "student",
-    "ckeditor",
+    #"ckeditor",
 ]
 
 DATABASES = {
