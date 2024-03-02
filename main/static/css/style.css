@@ -830,7 +830,7 @@ SERVICES FOR HOME
     
 }
 .service-bg-1{
-    background: url("../images/comp.jpg");
+    background: url("../images/class11.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -2930,7 +2930,7 @@ select.mobile-device {
     margin: 0;
     font-weight: 300;
     padding: 4px 0 0;
-    line-height: 1 !important:
+    line-height: 1 !important;
 }
 
 #preloader {

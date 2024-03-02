@@ -65,6 +65,8 @@ def pricing(request):
 def course2(request):
     return render(request, "course-grid-2.html")
 
+def preparation(request):
+    return render(request, "preparation.html")
 
 @csrf_exempt
 def contact(request):
