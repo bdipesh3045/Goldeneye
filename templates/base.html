@@ -57,14 +57,14 @@
                     <span class="icon-bar"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbars-host">
-					<ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item {% if request.resolver_match.url_name == 'home_page' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'home_page' %}">Home</a>
                         </li>
                         <li class="nav-item {% if request.resolver_match.url_name == 'about' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'about' %}">About Us</a>
                         </li>
-                        <li class="nav-item {% if request.resolver_match.url_name == 'services' %}active{% endif %}">
+                        <li class="nav-item {% if request.resolver_match.url_name == 'course2' %}active{% endif %}">
                             <a class="nav-link" href="{% url 'course2' %}">Services</a>
                         </li>
                         <li class="nav-item {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'blog_category' %}active{% endif %}">
@@ -84,11 +84,8 @@
                             <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
                         </li>
                     </ul>
-                    
-					<!-- <ul class="nav navbar-nav navbar-right">
-                        <li><a class="hover-btn-new log orange" href="{% url 'student_home' %}" data-toggle="modal" data-target="#login"><span>Student Login</span></a></li>
-                    </ul> -->
-				</div>
+                </div>
+                
 			</div>
 		</nav>
 	</header>
