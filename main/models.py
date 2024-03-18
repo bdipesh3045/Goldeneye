@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+import uuid
 
 
 # Create your models here.
@@ -67,3 +68,27 @@ class TeamModel(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.first_name} {self.last_name} - {self.post}"
+
+
+class Service(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(max_length=100, db_index=True)
+
+    def __str__(self):
+        return self.title
+
+
+class ServiceDetail(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100, db_index=True)
+    description = models.TextField()
+    image = models.ImageField(upload_to="service_images/", null=True, blank=True)
+
+    def __str__(self):
+        return self.title
+
+    # class Meta:
+    #     filters = [
+    #         models.Filter(fields=["title"]),
+    #     ]

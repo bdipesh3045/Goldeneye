@@ -808,7 +808,7 @@ SERVICES FOR HOME
 ----------------------------------------------------------*/
 
 .service-container{
-    background-color: rgb(220, 152, 15);
+
     font-family: 'Poppins', sans-serif;
 }
 .service-section-header{
@@ -821,7 +821,7 @@ SERVICES FOR HOME
     border: 1px solid #f7db60;
     text-align: center;
     background-color: rgb(243, 180, 64);
-    
+    box-shadow: 10px 10px 8px #888888;
 }
 
 .service-bg{
@@ -830,7 +830,7 @@ SERVICES FOR HOME
     
 }
 .service-bg-1{
-    background: url("../images/preparation.jpg");
+    background: url("../images/Class.jpg");
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
@@ -3464,97 +3464,7 @@ span.m_1 {
 }
 
 
-.our-team{
-    text-align: center;
-	margin-bottom: 30px;
-}
-.our-team .team-img{
-    overflow: hidden;
-    position: relative;
-}
-.our-team .team-img img{
-    width: 100%;
-    height: auto;
-}
-.our-team .social{
-    width: 100%;
-    height: 30%;
-    background: rgba(238, 164, 18,0.9);
-    position: absolute;
-    top: 50%;
-    left: 0;
-    opacity: 0;
-	border-radius: 100%;
-    transform: translateY(-50%) rotate(-30deg);
-    transition: all 0.3s ease 0s;
-}
-.our-team:hover .social{
-    height: 100%;
-    opacity: 1;
-	border-radius: 0px;
-    transform: translateY(-50%) rotate(0deg);
-}
-.our-team .social ul{
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    text-align: center;
-    position: absolute;
-    top: 45%;
-    left: 0;
-}
-.our-team .social ul li{
-    display: inline-block;
-}
-.our-team .social ul li a{
-    display: block;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 50%;
-    font-size: 17px;
-    color: #fff;
-    margin-left: 10px;
-    background: #212121;
-    transition: all 0.3s ease 0s;
-}
-.our-team .social ul li a:hover{
-    background: #fff;
-    color: #f3904d;
-}
-.our-team .team-content{
-    padding: 20px 0;
-    background: #f5f7f8;
-    color: #54478a;
-}
-.our-team .title{
-    display: block;
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    margin: 0 0 7px 0;
-	padding: 0px;
-}
-.our-team .post{
-    display: block;
-    font-size: 15px;
-    color: #999;
-}
-.our-team:hover .team-content{
-	background: #080808;
-}
-.our-team:hover .team-content .title{
-	color: wheat;
-}
-.our-team:hover .post{
-	color: #f3904d;
-}
 
-
-@media only screen and (max-width: 990px){
-    .our-team{ margin-bottom: 30px; }
-}
 
 .blog-item {
     background: #f1f1f1;
@@ -4053,7 +3963,6 @@ a.link-style3 {
 .course-meta-bot ul li:hover{
 	color: #eea412;
 }
-
 
 
 
